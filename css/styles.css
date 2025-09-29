@@ -140,15 +140,7 @@ a:hover { text-decoration: underline; }
   position: relative;
   overflow: hidden;
 }
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: radial-gradient(circle at 20% 50%, rgba(0,84,144,0.05) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(37,99,235,0.05) 0%, transparent 50%);
-  pointer-events: none;
-}
+.hero::before { content: none; }
 .hero-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 32px; align-items: center; }
 .hero h1 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 8px 0; }
 .hero .overline { text-transform: uppercase; letter-spacing: .12em; color: var(--primary); font-weight: 800; margin: 0 0 6px 0; font-size: 12px; }
