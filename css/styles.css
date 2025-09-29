@@ -1,7 +1,7 @@
 /* Base */
 @font-face {
   font-family: 'Satoshi';
-  src: url('/hero-section-component-master/font/satoshi.ttf') format('truetype');
+  src: url('hero-section-component-master/font/satoshi.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -43,7 +43,7 @@ a:hover { text-decoration: underline; }
 .section-bg::before {
   content: "";
   position: absolute; inset: 0; z-index: -2;
-  background-image: url('/images/hanka_mikroskop.jpg');
+  background-image: url('images/hanka_mikroskop.jpg');
   background-size: cover; background-position: center; background-repeat: no-repeat;
   filter: brightness(0.96);
 }
