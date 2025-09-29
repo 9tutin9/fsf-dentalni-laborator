@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontakt | FSF dentální laboratoř</title>
+    <meta name="description" content="Kontaktujte FSF dentální laboratoř v Opavě. Telefon, e‑mail, adresa a kontaktní formulář." />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/images/fsf-logo.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Přeskočit na obsah</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="/"><img src="/images/fsf-logo.svg" alt="FSF dentální laboratoř" width="120" height="36"/></a>
+        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Otevřít navigaci">☰</button>
+        <nav id="site-nav" class="site-nav" aria-label="Hlavní navigace">
+          <ul>
+            <li><a href="/">Úvod</a></li>
+            <li><a href="/index.html#o-nas">O nás</a></li>
+            <li><a href="/sluzby.html">Naše služby</a></li>
+            <li><a href="/prace.html">Naše práce</a></li>
+            <li><a class="btn btn-primary active" href="/kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container grid two">
+        <section aria-labelledby="contact-heading">
+          <h1 id="contact-heading">Kontakt</h1>
+          <address class="contact-card">
+            <p><strong>FSF dentální laboratoř</strong></p>
+            <p>
+              Nákladní 902/63<br />
+              746 01 Opava
+            </p>
+            <p>
+              Tel.: <a href="tel:+420777708907">+420 777 708 907</a><br />
+              E‑mail: <a href="mailto:dentlab@fsf-dentlab.cz">dentlab@fsf-dentlab.cz</a>
+            </p>
+          </address>
+
+          <div class="map-wrap">
+            <iframe
+              title="Mapa – FSF dentální laboratoř"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=N%C3%A1kladn%C3%AD%20902%2F63%2C%20746%2001%20Opava&output=embed"
+              aria-label="Mapa umístění"
+            ></iframe>
+          </div>
+        </section>
+
+        <section id="formular" aria-labelledby="form-heading">
+          <h2 id="form-heading">Napište nám</h2>
+          <form class="contact-form" method="post" action="#" enctype="multipart/form-data" novalidate>
+            <div class="field">
+              <label for="name">Jméno a příjmení</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="clinic">Klinika / pracoviště</label>
+              <input id="clinic" name="clinic" type="text" autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="email">E‑mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="phone">Telefon</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="message">Zpráva</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="field">
+              <label for="file">Příloha (volitelné)</label>
+              <input id="file" name="file" type="file" />
+            </div>
+            <div class="field-inline">
+              <button type="submit" class="btn btn-primary">Odeslat</button>
+              <p class="form-hint">Odesláním souhlasíte se zpracováním údajů pro účely komunikace.</p>
+            </div>
+            <output id="form-status" role="status" aria-live="polite"></output>
+          </form>
+          <noscript>
+            <p>Formulář vyžaduje zapnutý JavaScript pro okamžité potvrzení. Bez JS bude zpracován na serveru (viz README).</p>
+          </noscript>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-bottom">
+        <small>© <span id="year"></span> FSF dentální laboratoř</small>
+      </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+  </body>
+  </html>
+
+
+
