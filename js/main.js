@@ -311,6 +311,26 @@
   }
 
   initGoogleReviews();
+
+  // Mobile parallax fallback for background image in O nás
+  const parallaxSection = document.querySelector('.section-bg.parallax');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (parallaxSection && !prefersReduced) {
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY;
+          const offset = (y - parallaxSection.offsetTop) * 0.15; // gentle parallax
+          parallaxSection.style.setProperty('--py', `${offset}px`);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 })();
 
 
