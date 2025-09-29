@@ -315,13 +315,15 @@
   // Mobile parallax fallback for background image in O nás
   const parallaxSection = document.querySelector('.section-bg.parallax');
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (parallaxSection && !prefersReduced) {
+  const isMobile = window.innerWidth < 769;
+  
+  if (parallaxSection && !prefersReduced && isMobile) {
     let ticking = false;
     const onScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const y = window.scrollY;
-          const offset = (y - parallaxSection.offsetTop) * 0.15; // gentle parallax
+          const rect = parallaxSection.getBoundingClientRect();
+          const offset = (window.scrollY - rect.top) * 0.3; // stronger parallax on mobile
           parallaxSection.style.setProperty('--py', `${offset}px`);
           ticking = false;
         });

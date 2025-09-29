@@ -53,8 +53,10 @@ a:hover { text-decoration: underline; }
   background: rgba(255,255,255,0.6);
 }
 
-/* Parallax effect */
-.parallax::before { background-attachment: fixed; }
+/* Parallax effect - disable fixed on mobile for JS fallback */
+@media (min-width: 769px) {
+  .parallax::before { background-attachment: fixed; }
+}
 
 .skip-link {
   position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
